@@ -1,16 +1,63 @@
-# React + Vite
+PRODUCT MANAGEMENT SYSTEM
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A frontend Product Management System developed using React.js and Vite.
+The application allows users to add products, edit existing products, delete products, and manage product details efficiently.
 
-Currently, two official plugins are available:
+Features
+Add New Products
+Edit Existing Products
+Delete Products
+View Product List
+Product Management Dashboard
+CRUD Operations
+JSON Server Integration
+Responsive User Interface
+Technologies Used
+Frontend
+React.js
+Vite
+JavaScript
+CSS
+Data Management
+JSON Server
+db.json
+Project Structure
+PRODUCT-MANAGEMENT-SYSTEM/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   │
+│   ├── Components/
+│   │   ├── Add.jsx
+│   │   ├── Dashboard.jsx
+│   │   ├── Delete.jsx
+│   │   └── Edit.jsx
+│   │
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   └── main.jsx
+│
+├── db.json
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+CRUD Operations
+Add Product
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Users can enter product details such as product name and price and add a new product to the product list.
 
-## React Compiler
+Edit Product
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Users can select an existing product and update its details. The changes are saved to the product data.
 
-## Expanding the ESLint configuration
+Delete Product
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Users can delete an existing product from the product list when it is no longer required.
+
+View Products
+
+The dashboard displays the available products and their details in an organized manner.
