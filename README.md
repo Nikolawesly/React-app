@@ -1,27 +1,42 @@
-PRODUCT MANAGEMENT SYSTEM
+# PRODUCT MANAGEMENT SYSTEM
 
-A frontend Product Management System developed using React.js and Vite.
+A frontend **Product Management System** developed using **React.js** and **Vite**.
 The application allows users to add products, edit existing products, delete products, and manage product details efficiently.
 
-Features
-Add New Products
-Edit Existing Products
-Delete Products
-View Product List
-Product Management Dashboard
-CRUD Operations
-JSON Server Integration
-Responsive User Interface
-Technologies Used
-Frontend
-React.js
-Vite
-JavaScript
-CSS
-Data Management
-JSON Server
-db.json
-Project Structure
+---
+
+## Features
+
+* Add New Products
+* Edit Existing Products
+* Delete Products
+* View Product List
+* Product Management Dashboard
+* CRUD Operations
+* JSON Server Integration
+* Responsive User Interface
+
+---
+
+## Technologies Used
+
+### Frontend
+
+* React.js
+* Vite
+* JavaScript
+* CSS
+
+### Data Management
+
+* JSON Server
+* `db.json`
+
+---
+
+## Project Structure
+
+```text
 PRODUCT-MANAGEMENT-SYSTEM/
 │
 ├── public/
@@ -45,19 +60,60 @@ PRODUCT-MANAGEMENT-SYSTEM/
 ├── package.json
 ├── vite.config.js
 └── README.md
-CRUD Operations
-Add Product
+```
 
-Users can enter product details such as product name and price and add a new product to the product list.
+---
 
-Edit Product
+## CRUD Operations
+
+### Add Product
+
+Users can enter product details such as **product name and price** and add a new product to the product list.
+
+### Edit Product
 
 Users can select an existing product and update its details. The changes are saved to the product data.
 
-Delete Product
+### Delete Product
 
 Users can delete an existing product from the product list when it is no longer required.
 
-View Products
+### View Products
 
 The dashboard displays the available products and their details in an organized manner.
+
+---
+
+## How to Run
+
+Install the project dependencies:
+
+```bash
+npm install
+```
+
+Start the JSON Server:
+
+```bash
+npx json-server --watch db.json
+```
+
+Start the React development server:
+
+```bash
+npm run dev
+```
+
+---
+
+## Purpose
+
+This project demonstrates the implementation of **CRUD operations using React.js** and provides practical experience with React components, state management, event handling, and JSON Server integration.
+
+---
+
+## Author
+
+**NIKOLA WESLY ANNURI**
+
+GitHub: [@Nikolawesly](https://github.com/Nikolawesly)
