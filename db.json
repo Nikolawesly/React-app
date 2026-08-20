@@ -3,13 +3,12 @@
     {
       "id": "1",
       "name": "panasonic ac",
-      "price": "300000"
+      "price": "800000"
     },
     {
-      "name": "shirt",
-      "price": "9000",
-      "id": "nw8_Hb0Yf84"
+      "id": "92dd",
+      "name": "lenovo",
+      "price": "90"
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }
