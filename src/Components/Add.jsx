@@ -17,11 +17,16 @@ export class Add extends Component {
 
   submitHandler = (event) => {
     event.preventDefault()
-    fetch('http://localhost:3000/products', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(this.state)
-    })
+    // fetch('http://localhost:3000/products', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify(this.state)
+    // })
+    fetch(`${import.meta.env.VITE_API_URL}/products`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(this.state)
+})
       .then(res => {
         console.log('Status:', res.status)
         if (res.status === 201) {

@@ -18,11 +18,16 @@ export class Edit extends Component {
   submitHandler =(event)=>{
     event.preventDefault()//ensures result doesnt disappear in console
     console.log(this.state)
-    fetch(`http://localhost:3000/products/${this.state.id}`,{
-      method:'PUT',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify(this.state)
-    })
+    // fetch(`http://localhost:3000/products/${this.state.id}`,{
+    //   method:'PUT',
+    //   headers:{'Content-Type':'application/json'},
+    //   body:JSON.stringify(this.state)
+    // })
+    fetch(`${import.meta.env.VITE_API_URL}/products/${this.state.id}`, {
+  method: 'PUT',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(this.state)
+})
     .then(res=>{
       console.log(res)
       if(res.status===200){
@@ -34,12 +39,22 @@ export class Edit extends Component {
 
   componentDidMount(){
     const id=window.location.pathname.split('/')[2]
-    fetch(`http://localhost:3000/products/${id}`)
-    .then(res=>res.json())
-    .then(data=>{
-      console.log(data);
-      this.setState({id:data.id,name:data.name,price:data.price})
-    })
+    // fetch(`http://localhost:3000/products/${id}`)
+    // .then(res=>res.json())
+    // .then(data=>{
+    //   console.log(data);
+    //   this.setState({id:data.id,name:data.name,price:data.price})
+    // })
+    fetch(`${import.meta.env.VITE_API_URL}/products/${id}`)
+  .then(res => res.json())
+  .then(data => {
+    console.log(data);
+    this.setState({
+      id: data.id,
+      name: data.name,
+      price: data.price
+    });
+  });
   }
   
 

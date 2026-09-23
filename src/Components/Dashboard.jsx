@@ -9,15 +9,22 @@ export class Dashboard extends Component {
          products:[]
       }
     }
-    componentDidMount(){
-        fetch('http://localhost:3000/products')
-        .then(res=>res.json())
-        .then(data=>{
-            console.log(data)
-            this.setState({products:data})
-        })
-    }
-    
+    // componentDidMount(){
+    //     fetch('http://localhost:3000/products')
+    //     .then(res=>res.json())
+    //     .then(data=>{
+    //         console.log(data)
+    //         this.setState({products:data})
+    //     })
+    // }
+    componentDidMount() {
+  fetch(`${import.meta.env.VITE_API_URL}/products`)
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+      this.setState({ products: data });
+    });
+}
     render() {
         //Destrucuturing
         const {products} =this.state
