@@ -40,6 +40,7 @@ export class Dashboard extends Component {
                             <td>Id</td>
                             <td>Name</td>
                             <td>Price</td>
+                            <td>No. of Products</td>
                             <td>Actions</td>
 
                         </tr>
@@ -52,6 +53,7 @@ export class Dashboard extends Component {
                                     <td>{pro.id}</td>
                                     <td>{pro.name}</td>
                                     <td>{pro.price}</td>
+                                    <td>{pro.noOfProducts}</td>
                                     <td>
                                         <a href={`edit/${pro.id}`} className='btn btn-warning ' >edit</a>
                                         <a href={`delete/${pro.id}`} className='btn btn-danger mx-2' onClick={<Delete/>} >delete</a>

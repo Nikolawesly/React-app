@@ -5,7 +5,7 @@ export class Add extends Component {
     super(props)
 
     this.state = {
-      name: '', price: 0
+      name: '', price: '', noOfProducts: ''
     }
   }
 
@@ -58,6 +58,13 @@ export class Add extends Component {
             <div className='col' >
               <label htmlFor="price" className='form-label' >Price</label>
               <input type="text" className='form-control' id='price' name='price' value={price} onChange={this.ChangeHandler} />
+            </div>
+          </div>
+
+          <div className='row mb-3'>
+            <div className='col' >
+              <label htmlFor="noOfProducts" className='form-label'>No. of Products</label>
+              <input type="text" className='form-control' id='noOfProducts' name='noOfProducts' value={this.state.noOfProducts} onChange={this.ChangeHandler} />
             </div>
           </div>
 

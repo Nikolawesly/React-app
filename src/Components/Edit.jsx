@@ -5,7 +5,7 @@ export class Edit extends Component {
     super(props)
 
     this.state = {
-      id:'',name: '', price: ''
+      id:'',name: '', price: '', noOfProducts: ''
     }
   }
 
@@ -52,7 +52,8 @@ export class Edit extends Component {
     this.setState({
       id: data.id,
       name: data.name,
-      price: data.price
+      price: data.price,
+      noOfProducts: data.noOfProducts
     });
   });
   }
@@ -75,6 +76,13 @@ export class Edit extends Component {
             <div className='col' >
               <label for="price" className='form-label' >Price</label>
               <input type="text" className='form-control' id='price' name='price' defaultValue={price} onChange={this.ChangeHandler}  />
+            </div>
+          </div>
+
+          <div className='row mb-3'>
+            <div className='col' >
+              <label for="noOfProducts" className='form-label'>No. of Products</label>
+              <input type="text" className='form-control' id='noOfProducts' name='noOfProducts' defaultValue={this.state.noOfProducts} onChange={this.ChangeHandler} />
             </div>
           </div>
 
